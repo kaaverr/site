@@ -17,7 +17,7 @@ public class ClientsWEBController{
 
     @RequestMapping("/clients")
     String getAll(Model model){
-        System.out.println("hello");
+        System.out.println("hello       ");
         model.addAttribute("clients" , service.getAll());
         return "clients";
     }
