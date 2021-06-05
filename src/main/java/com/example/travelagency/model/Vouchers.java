@@ -1,10 +1,8 @@
 package com.example.travelagency.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
 public class Vouchers {
 
     private Integer routecode;
@@ -13,4 +11,11 @@ public class Vouchers {
     private Integer number;
     private Integer discount;
 
+    public Vouchers(Integer routecode, Integer customercode, Integer dateofdeparture, Integer number, Integer discount) {
+        this.routecode = routecode;
+        this.customercode = customercode;
+        this.dateofdeparture = dateofdeparture;
+        this.number = number;
+        this.discount = discount;
+    }
 }

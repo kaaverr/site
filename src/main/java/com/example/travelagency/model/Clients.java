@@ -1,10 +1,8 @@
 package com.example.travelagency.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
 public class Clients {
 
     private Integer code;
@@ -14,4 +12,12 @@ public class Clients {
     private String address;
     private String fonenumber;
 
+    public Clients(Integer code, String firstname, String lastname, String fathersname, String address, String fonenumber) {
+        this.code = code;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.fathersname = fathersname;
+        this.address = address;
+        this.fonenumber = fonenumber;
+    }
 }
