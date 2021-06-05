@@ -15,6 +15,7 @@
         <th>FatherName</th>
         <th>Address</th>
         <th>FoneNumber</th>
+        <th>Delete</th>
     </tr>
     <#list clients as client>
         <tr align="center">
@@ -24,8 +25,12 @@
             <td>${client.fathersname}</td>
             <td>${client.address}</td>
             <td>${client.fonenumber}</td>
+            <td><button><a href="/ui/rooms/delete/${client.code}">Delete </a></button></td>
         </tr>
     </#list>
 </table>
+
+<center><button><a href="/index.html"> <h2>type me</h2> </a></button></center>
+
 </body>
 </html>

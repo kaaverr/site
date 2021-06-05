@@ -1,6 +1,6 @@
 package com.example.travelagency.controller.rest;
 
-import com.example.travelagency.model.Clients;
+import com.example.travelagency.model.Client;
 import com.example.travelagency.services.client.ClientsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,23 +16,23 @@ public class ClientsController {
     ClientsService service;
 
     @RequestMapping
-    List<Clients> getAll() {
+    List<Client> getAll() {
         return service.getAll();
     }
     @PostMapping
-    Clients create(Clients clients) {
+    Client create(Client clients) {
         return null;
     }
     @GetMapping("/{code}")
-    Clients get(String code) {
+    Client get(String code) {
         return null;
     }
     @PutMapping
-    Clients update(Clients clients) {
+    Client update(Client clients) {
         return null;
     }
     @DeleteMapping
-    Clients delate(String name){
+    Client delate(String name){
 
         return null;
     }
