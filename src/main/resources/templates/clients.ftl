@@ -7,7 +7,7 @@
     <title>Rooms</title>
 </head>
 <body>
-<h1>client list</h1>
+
 <table class="table table-dark table-hover table table-bordered border-success" align="center" style="width: 1000px;">
     <tr align="center">
         <th>Code</th>
