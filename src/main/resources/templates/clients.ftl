@@ -26,12 +26,12 @@
             <td>${client.fathersname}</td>
             <td>${client.address}</td>
             <td>${client.fonenumber}</td>
-            <td><button><a href="/ui/rooms/delete/${client.code}">Delete </a></button></td>
+            <td><a href="/ui/rooms/delete/${client.code}"><button> Delete </button> </a></td>
         </tr>
     </#list>
 </table>
 
-<center><button><a href="/index.html"> <h2>return</h2> </a></button></center>
+<center><a href="/index.html"> <button><h2> Return </h2></button></a></center>
 
 </body>
 </html>
