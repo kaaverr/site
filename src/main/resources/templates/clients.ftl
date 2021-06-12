@@ -30,7 +30,7 @@
     </#list>
 </table>
 
-<center><button><a href="/index.html"> <h2>type me</h2> </a></button></center>
+<center><button><a href="/index.html"> <h2>return</h2> </a></button></center>
 
 </body>
 </html>

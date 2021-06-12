@@ -17,18 +17,22 @@ public class ClientsController {
 
     @RequestMapping
     List<Client> getAll() {
+
         return service.getAll();
     }
     @PostMapping
-    Client create(Client clients) {
+    Client create(Client clients)
+    {
         return null;
     }
     @GetMapping("/{code}")
     Client get(String code) {
+
         return null;
     }
     @PutMapping
     Client update(Client clients) {
+
         return null;
     }
     @DeleteMapping
