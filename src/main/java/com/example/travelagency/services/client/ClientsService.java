@@ -4,9 +4,7 @@ import com.example.travelagency.model.Client;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -36,5 +34,12 @@ public class ClientsService {
         Client client = new Client();
         clients = clients.stream().filter(element ->element.getCode() != code)
                 .collect(Collectors.toList());
+    }
+
+    public void create(Client client) {
+        Random random = new Random();
+        Integer code = random.nextInt(100);
+        client.setCode(code);
+        clients.add(client);
     }
 }

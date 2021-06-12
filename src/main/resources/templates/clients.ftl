@@ -32,6 +32,7 @@
 </table>
 
 <center><a href="/index.html"> <button><h2> Return </h2></button></a></center>
+<center><a href="/ui/rooms/create"> <button><h2> Create </h2></button></a></center>
 
 </body>
 </html>
