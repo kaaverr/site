@@ -56,6 +56,5 @@ public class ClientsService {
 
     public void update(Client client) {
     repository.save(client);
-
     }
 }
