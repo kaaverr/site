@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<center><h1>Create now travel</h1></center>
+<center><h1>Update now travel</h1></center>
 <div>
     <fieldset>
         <form name = "client" action="" method="POST">
@@ -28,7 +28,7 @@
 </div>
 
 <center><a href="/index.html"> <button><h4>Menu</h4></button></a></center>
-<center><a href="/ui/rooms/clients"> <button><h3> Customer List </h3></button></a></center>
+<center><a href="/ui/rooms/clients"> <button><h2> Customer List </h2></button></a></center>
 
 </body>
 </html>

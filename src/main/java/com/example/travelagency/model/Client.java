@@ -1,10 +1,12 @@
 package com.example.travelagency.model;
 
-import lombok.Data;
-import lombok.Getter;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document
 public class Client {
 
+    @Id
     private Integer code;
     private String firstname;
     private String lastname;

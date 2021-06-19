@@ -17,6 +17,7 @@
         <th>Address</th>
         <th>FoneNumber</th>
         <th>Delete</th>
+        <th>Update</th>
     </tr>
     <#list clients as client>
         <tr align="center">
@@ -26,12 +27,14 @@
             <td>${client.fathersname}</td>
             <td>${client.address}</td>
             <td>${client.fonenumber}</td>
-            <td><a href="/ui/rooms/delete/${client.code}"><button> Delete </button> </a></td>
+            <td><a href="/ui/rooms/delete/${client.code}"><button type="button" class="btn btn-danger">Delete</button> </a></td>
+            <td><a href="/ui/rooms/update/${client.code}"><button type="button" class="btn btn-success">Update</button> </a></td>
         </tr>
     </#list>
 </table>
 
-<center><a href="/index.html"> <button><h2> Return </h2></button></a></center>
+<center><a href="/index.html"> <button type="button" class="btn btn-primary"><h4>Menu</h4></button></a></center>
+<br>
 <center><a href="/ui/rooms/create"> <button><h2> Create </h2></button></a></center>
 
 </body>

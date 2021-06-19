@@ -1,6 +1,8 @@
 package com.example.travelagency.services.client;
 
 import com.example.travelagency.model.Client;
+import com.example.travelagency.repository.ClientRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -10,6 +12,9 @@ import java.util.stream.Collectors;
 @Service
 public class ClientsService {
     private List<Client> clients;
+
+    @Autowired
+    ClientRepository repository;
 
     @PostConstruct
     void init(){
@@ -23,6 +28,10 @@ public class ClientsService {
 
                 )
         );
+
+    repository.saveAll(clients);
+    clients = clients;
+
     }
 
     public List<Client> getAll() {
@@ -31,15 +40,21 @@ public class ClientsService {
     }
 
     public void delete(Integer code) {
-        Client client = new Client();
-        clients = clients.stream().filter(element ->element.getCode() != code)
-                .collect(Collectors.toList());
+        repository.deleteById(code);
     }
 
     public void create(Client client) {
-        Random random = new Random();
-        Integer code = random.nextInt(100);
-        client.setCode(code);
-        clients.add(client);
+    Random random = new Random();
+    int id = random.nextInt(1000);
+    client.setCode(id);
+    repository.save(client);
+    }
+
+    public Client get(Integer code) {
+    return repository.findById(code).get();
+    }
+
+    public void update(Client client) {
+    repository.save(client);
     }
 }
